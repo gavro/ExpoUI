@@ -5,6 +5,10 @@
  * Depencencies:
  * - jQuery UI // need to specify function for custom UI usage
  * - jQuery hashchange event (http://benalman.com/projects/jquery-hashchange-plugin)
+ *
+ * Copyright (c) 2012 Gabrijel Gavranović / Gavro
+ * Dual licensed under the MIT and GPL licenses.
+ *
  ****/
 
 /* global vars */
@@ -126,10 +130,6 @@ function initFooterNavigation(){
 			$('#launcher').animate({scrollTop: 0}, { 
 				duration: 750, 
 				queue: false/*, //queue false, fix for Chrome e.a. -->  uses scrollTop@body, so don't wait for this one to finish...
-				complete: function(){ 
-					$('#launcher .screen .panel').removeClass('active');
-					$('#launcher .screen .panel:eq('+siblingIndex+')').addClass('active');
-				}*/
 			});
 			
 			var newPos      = panelWidthDiscrete/screenWidthDiscrete*100*siblingIndex;
