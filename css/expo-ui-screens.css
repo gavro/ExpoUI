@@ -1,0 +1,233 @@
+/**** 
+ * jQuery ExpoUI plugin
+ * Author: Gabrijel Gavranović // Gavro
+ *
+ * Depencencies:
+ * - jQuery UI // need to specify function for custom UI usage
+ * - jQuery hashchange event (http://benalman.com/projects/jquery-hashchange-plugin)
+ *
+ * ExpoUI screen tab zoom/expo styles (1~9 screens) --- excessive!
+ * Include expo-ui.css for dependant ExpoUI default styles & CSS transitions
+ ****/
+
+
+/* 1 screen, see 9 */
+
+
+/* 2 screens */
+.expo-ui.screens-2 .panel:nth-child(1){
+	-moz-transform-origin:27% 50%;
+	-webkit-transform-origin:27% 50%;
+	-o-transform-origin:27% 50%;
+	-ms-transform-origin:27% 50%;
+	transform-origin:27% 50%;
+}
+.expo-ui.screens-2 .panel:nth-child(2){
+	-moz-transform-origin:73% 50%;
+	-webkit-transform-origin:73% 50%;
+	-o-transform-origin:73% 50%;
+	-ms-transform-origin:73% 50%;
+	transform-origin:73% 50%;
+}
+
+
+/* 3 screens, see 9 */
+
+
+/* 4 screens */
+.expo-ui.screens-4 .panel:nth-child(1){
+	-moz-transform-origin:27% 26.5%;
+	-webkit-transform-origin:27% 26.5%;
+	-o-transform-origin:27% 26.5%;
+	-ms-transform-origin:27% 26.5%;
+	transform-origin:27% 26.5%;
+}
+.expo-ui.screens-4 .panel:nth-child(2){
+	-moz-transform-origin:73% 26.5%;
+	-webkit-transform-origin:73% 26.5%;
+	-o-transform-origin:73% 26.5%;
+	-ms-transform-origin:73% 26.5%;
+	transform-origin:73% 26.5%;
+}
+.expo-ui.screens-4 .panel:nth-child(3){
+	-moz-transform-origin:27% 76.5%;
+	-webkit-transform-origin:27% 76.5%;
+	-o-transform-origin:27% 76.5%;
+	-ms-transform-origin:27% 76.5%;
+	transform-origin:27% 76.5%;
+}
+.expo-ui.screens-4 .panel:nth-child(4){
+	-moz-transform-origin:73% 76.5%;
+	-webkit-transform-origin:73% 76.5%;
+	-o-transform-origin:73% 76.5%;
+	-ms-transform-origin:73% 76.5%;
+	transform-origin:73% 76.5%;
+}
+
+
+/* 5 screens: see 7, 8 & 9 */
+
+
+/* 6 screens */
+.expo-ui.screens-6 .panel:nth-child(1){
+	-moz-transform-origin:4% 26.5%;
+	-webkit-transform-origin:4% 26.5%;
+	-o-transform-origin:4% 26.5%;
+	-ms-transform-origin:4% 26.5%;
+	transform-origin:4% 26.5%;
+}
+.expo-ui.screens-6 .panel:nth-child(2){
+	-moz-transform-origin:50% 26.5%;
+	-webkit-transform-origin:50% 26.5%;
+	-o-transform-origin:50% 26.5%;
+	-ms-transform-origin:50% 26.5%;
+	transform-origin:50% 26.5%;
+}
+.expo-ui.screens-6 .panel:nth-child(3){
+	-moz-transform-origin:96% 26.5%;
+	-webkit-transform-origin:96% 26.5%;
+	-o-transform-origin:96% 26.5%;
+	-ms-transform-origin:96% 26.5%;
+	transform-origin:96% 26.5%;
+}
+.expo-ui.screens-6 .panel:nth-child(4){
+	-moz-transform-origin:4% 76.5%;
+	-webkit-transform-origin:4% 76.5%;
+	-o-transform-origin:4% 76.5%;
+	-ms-transform-origin:4% 76.5%;
+	transform-origin:4% 76.5%;
+}
+.expo-ui.screens-6 .panel:nth-child(5){
+	-moz-transform-origin:50% 76.5%;
+	-webkit-transform-origin:50% 76.5%;
+	-o-transform-origin:50% 76.5%;
+	-ms-transform-origin:50% 76.5%;
+	transform-origin:50% 76.5%;
+}
+.expo-ui.screens-6 .panel:nth-child(6){
+	-moz-transform-origin:96% 76.5%;
+	-webkit-transform-origin:96% 76.5%;
+	-o-transform-origin:96% 76.5%;
+	-ms-transform-origin:96% 76.5%;
+	transform-origin:96% 76.5%;
+}
+
+
+/* 7 screens, rest see 8 & 9 */
+.expo-ui.screens-5 .panel:nth-child(4),
+.expo-ui.screens-7 .panel:nth-child(6){
+	-moz-transform-origin:27% 97%;
+	-webkit-transform-origin:27% 97%;
+	-o-transform-origin:27% 97%;
+	-ms-transform-origin:27% 97%;
+	transform-origin:27% 97%;
+}
+.expo-ui.screens-5 .panel:nth-child(5),
+.expo-ui.screens-7 .panel:nth-child(7){
+	-moz-transform-origin:73% 97%;
+	-webkit-transform-origin:73% 97%;
+	-o-transform-origin:73% 97%;
+	-ms-transform-origin:73% 97%;
+	transform-origin:73% 97%;
+}
+
+
+/* 8 screens, rest see 9 */
+.expo-ui.screens-5 .panel:nth-child(1),
+.expo-ui.screens-7 .panel:nth-child(1),
+.expo-ui.screens-8 .panel:nth-child(1){
+	-moz-transform-origin:27% 3%;
+	-webkit-transform-origin:27% 3%;
+	-o-transform-origin:27% 3%;
+	-ms-transform-origin:27% 3%;
+	transform-origin:27% 3%;
+}
+.expo-ui.screens-5 .panel:nth-child(2),
+.expo-ui.screens-7 .panel:nth-child(2),
+.expo-ui.screens-8 .panel:nth-child(2){
+	-moz-transform-origin:73% 3%;
+	-webkit-transform-origin:73% 3%;
+	-o-transform-origin:73% 3%;
+	-ms-transform-origin:73% 3%;
+	transform-origin:73% 3%;
+}
+
+
+/* 9 screens */
+.expo-ui.screens-9 .panel:nth-child(1){
+	-moz-transform-origin:4% 3%;
+	-webkit-transform-origin:4% 3%;
+	-o-transform-origin:4% 3%;
+	-ms-transform-origin:4% 3%;
+	transform-origin:4% 3%;
+}
+.expo-ui.screens-9 .panel:nth-child(2){
+	-moz-transform-origin:50% 3%;
+	-webkit-transform-origin:50% 3%;
+	-o-transform-origin:50% 3%;
+	-ms-transform-origin:50% 3%;
+	transform-origin:50% 3%;
+}
+.expo-ui.screens-9 .panel:nth-child(3){
+	-moz-transform-origin:96% 3%;
+	-webkit-transform-origin:96% 3%;
+	-o-transform-origin:96% 3%;
+	-ms-transform-origin:96% 3%;
+	transform-origin:96% 3%;
+}
+.expo-ui.screens-3 .panel:nth-child(1),
+.expo-ui.screens-7 .panel:nth-child(3),
+.expo-ui.screens-8 .panel:nth-child(3),
+.expo-ui.screens-9 .panel:nth-child(4){
+	-moz-transform-origin:4% 50%;
+	-webkit-transform-origin:4% 50%;
+	-o-transform-origin:4% 50%;
+	-ms-transform-origin:4% 50%;
+	transform-origin:4% 50%;
+}
+.expo-ui.screens-1 .panel:nth-child(1),
+.expo-ui.screens-3 .panel:nth-child(2),
+.expo-ui.screens-5 .panel:nth-child(3),
+.expo-ui.screens-7 .panel:nth-child(4),
+.expo-ui.screens-8 .panel:nth-child(4),
+.expo-ui.screens-9 .panel:nth-child(5){
+	-moz-transform-origin:50% 50%;
+	-webkit-transform-origin:50% 50%;
+	-o-transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%;
+	transform-origin:50% 50%;
+}
+.expo-ui.screens-3 .panel:nth-child(3),
+.expo-ui.screens-7 .panel:nth-child(5),
+.expo-ui.screens-8 .panel:nth-child(5),
+.expo-ui.screens-9 .panel:nth-child(6){
+	-moz-transform-origin:96% 50%;
+	-webkit-transform-origin:96% 50%;
+	-o-transform-origin:96% 50%;
+	-ms-transform-origin:96% 50%;
+	transform-origin:96% 50%;
+}
+.expo-ui.screens-8 .panel:nth-child(6),
+.expo-ui.screens-9 .panel:nth-child(7){
+	-moz-transform-origin:4% 97%;
+	-webkit-transform-origin:4% 97%;
+	-o-transform-origin:4% 97%;
+	-ms-transform-origin:4% 97%;
+	transform-origin:4% 97%;
+}
+.expo-ui.screens-8 .panel:nth-child(7),
+.expo-ui.screens-9 .panel:nth-child(8){
+	-moz-transform-origin:50% 97%;
+	-webkit-transform-origin:50% 97%;
+	-o-transform-origin:50% 97%;
+	-ms-transform-origin:50% 97%;
+	transform-origin:50% 97%;
+}
+.expo-ui.screens-8 .panel:nth-child(8),
+.expo-ui.screens-9 .panel:nth-child(9){
+	-moz-transform-origin:96% 97%;
+	-webkit-transform-origin:96% 97%;
+	-o-transform-origin:96% 97%;
+	-ms-transform-origin:96% 97%;
+	transform-origin:96% 97%;
+}

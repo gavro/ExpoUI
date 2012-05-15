@@ -1,0 +1,49 @@
+/**** 
+ * jQuery ExpoUI plugin
+ * Author: Gabrijel Gavranović // Gavro
+ *
+ * Depencencies:
+ * - jQuery UI // need to specify function for custom UI usage
+ * - jQuery hashchange event (http://benalman.com/projects/jquery-hashchange-plugin)
+ *
+ * ExpoUI demo styles
+ ****/
+
+
+@font-face {
+    font-family: 'COM4tSansMediumRegular';
+    src: url('fonts/com4s_m-webfont.eot');
+    src: url('fonts/com4s_m-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/com4s_m-webfont.woff') format('woff'),
+         url('fonts/com4s_m-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+	font-family: 'COM4tSansMediumRegular', Arial, Helvetica, Geneva, sans-serif;
+	overflow-x: hidden !important;
+	margin: 0; padding: 0; border: 0;
+}
+
+.panel .content h2{
+	position: absolute;
+	right:50%;
+	top:50px;
+	font-size: 4em;
+	z-index: 5;
+	margin: 0 150px 0 0;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	z-index: 100;
+}
+
+.panel .content .inner{
+	position: relative;
+	width: 80%;
+	padding-top: 150px;
+	margin: 0 auto;
+	left: 50px;
+}
