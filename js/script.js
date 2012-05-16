@@ -129,7 +129,7 @@ function initFooterNavigation(){
 			
 			$('#launcher').animate({scrollTop: 0}, { 
 				duration: 750, 
-				queue: false/*, //queue false, fix for Chrome e.a. -->  uses scrollTop@body, so don't wait for this one to finish...
+				queue: false/*, //queue false, fix for Chrome e.a. -->  uses scrollTop@body, so don't wait for this one to finish... */
 			});
 			
 			var newPos      = panelWidthDiscrete/screenWidthDiscrete*100*siblingIndex;
