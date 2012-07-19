@@ -51,3 +51,10 @@ html{
 	margin: 0 auto;
 	left: 50px;
 }
+
+a, a:visited {
+	color: #7396b4; text-decoration: none;
+}
+a:hover {
+	color: #3c82be; text-decoration: none;
+}

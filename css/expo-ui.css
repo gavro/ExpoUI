@@ -67,12 +67,29 @@ body{
 	white-space: nowrap;
 	float: left;
 	
-	-webkit-transition: all .5s ease;
-	-moz-transition: all .5s ease;
-	-o-transition: all .5s ease;
-	-ms-transition: all .5s ease;
-	transition: all .5s ease;
+	/*-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	transition: all .4s ease;*/
 	
+	/*-webkit-transition: -webkit-transform background .4s ease;
+	-moz-transition: -moz-transform background .4s ease;
+	-o-transition: -o-transform background .4s ease;
+	-ms-transition: -ms-transform background .4s ease;
+	transition: transform background .4s ease;*/
+	
+	-webkit-transition-property: -webkit-transform, background, border, -webkit-transform-origin;
+	-webkit-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-moz-transition-property: -moz-transform, background, border, -moz-transform-origin;
+	-moz-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-o-transition-property: -o-transform, background, border, -o-transform-origin;
+	-o-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-ms-transition-property: -ms-transform, background, border, -ms-transform-origin;
+	-ms-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	transition-property: transform, background, border, transform-origin;
+	transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+
 	-webkit-transform: scale(1);
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
@@ -83,7 +100,11 @@ body{
 	-webkit-transform: translateZ(0);
 	
 	overflow: hidden;
-	margin: 0; padding: 0; border: 0;
+	margin: 0; padding: 0; /*border: 0;*/
+	
+	border: 0px solid #fff;
+	-moz-border-radius: 0px;
+	border-radius: 0px;
 }
 
 .screen .panel.active{overflow: visible;}
@@ -92,11 +113,22 @@ body{
 	width: 100% !important;
 	height: 100%;
 	
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	-o-transition: all 0.5s ease;
-	-ms-transition: all 0.5s ease;
-	transition: all 0.5s ease;
+	/*-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;*/
+	
+	-webkit-transition-property: -webkit-transform, background, border, -webkit-transform-origin;
+	-webkit-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-moz-transition-property: -moz-transform, background, border, -moz-transform-origin;
+	-moz-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-o-transition-property: -o-transform, background, border, -o-transform-origin;
+	-o-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	-ms-transition-property: -ms-transform, background, border, -ms-transform-origin;
+	-ms-transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
+	transition-property: transform, background, border, transform-origin;
+	transition-duration: 0.7s, 0.7s, 0.7s, 0.7s;
 	
 	-webkit-transform: scale(0.3);
 	-moz-transform: scale(0.3);
@@ -117,6 +149,10 @@ body{
 	
 	position: absolute;
 	overflow: visible;
+
+	/* Fallback for web browsers without RGBa support */
+	background: rgb(14, 14, 14);
+	background: rgba(14, 14, 14, 0.6);
 }
 .screen.expo-ui .panel:hover{box-shadow: 0 0 15px #c0b3a1;}
 
